@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-placeholder: rgba(0, 0, 0, 0.2);
+  --color-pink-main: #DC1FFF;
+  --color-black-main: #EEEEEE;
+  --color-white: #FFFFFF;
+  --color-purple-main: #5A26C0;
+  --color-dark-purple: #0A0820;
+  --color-slate-blue: #3B378B;
+  --color-midnight: #14123A;
+  --color-lapis-blue: #233269;
+  --color-secondary: #6C7DBA;
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
+  --font-monsterrat: var(--font-monsterrat);
+  --font-josefinSans: var(--font-josefinSans);
+  --color-placeholder: rgba(0, 0, 0, 0.2);
+  --color-pink-main: #DC1FFF;
+  --color-black-main: #EEEEEE;
+  --color-white: #FFFFFF;
+  --color-purple-main: #5A26C0;
+  --color-dark-purple: #0A0820;
+  --color-slate-blue: #3B378B;
+  --color-midnight: #14123A;
+  --color-lapis-blue: #233269;
+  --color-secondary: #6C7DBA;
+  --gradient-purple-pink: linear-gradient(90deg, #7226FF 0%, #DB1FFF 100%);
+  --gradient-blue-purple: linear-gradient(90deg, #3B378B 0%, #7226FF 100%);
+  --gradient-lightblue-white-pink: linear-gradient(90deg, #87F5F5 0%, #FFFFFF 50%, #F042FF 100%);
+  --gradient-blue-basic: linear-gradient(25deg, #0A0820 0%, #233269 52%, #0A0820 86%);
+
+}
+
+
+/* Custom Utilities */
+@utility bg-gradient-purple-pink {
+  background: var(--gradient-purple-pink);
+}
+
+@utility bg-gradient-blue-purple {
+  background: var(--gradient-blue-purple);
+}
+
+@utility bg-gradient-lightblue-white-pink {
+  background: var(--gradient-lightblue-white-pink);
+}
+@utility bg-gradient-blue-basic {
+  background: var(--gradient-blue-basic);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
