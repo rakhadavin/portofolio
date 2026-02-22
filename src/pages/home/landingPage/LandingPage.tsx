@@ -32,7 +32,7 @@ const LandingPage = () => {
                 <div className="flex flex-col mb-6">
                     <div className="flex flex-row gap-5 justify-between items-end py-4">
                         <h1 className="text-white font-josefinSans text-8xl uppercase font-bold">Rakha Davin</h1>
-                        <Link href="/cv" className="text-white underline text-sm font-light">View CV</Link>
+                        <Link href="https://drive.google.com/file/d/1ZwJQdUSNfvRq_bJ9tZwZrL8c1SfkNG63/view?usp=drive_link" className="text-white underline text-sm font-light">View CV</Link>
                     </div>
                     <div className="h-px w-full bg-white/30" />
                 </div>
