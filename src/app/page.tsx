@@ -1,4 +1,5 @@
 import CoreExpertise from '../pages/home/CoreExpertise'
+import Experiences from '../pages/home/Experiences'
 import HighlightedProjects from '../pages/home/HighlightedProjects'
 import LandingPage from '../pages/home/landingPage/LandingPage'
 
@@ -8,6 +9,7 @@ const page = () => {
       <LandingPage />
       <CoreExpertise />
       <HighlightedProjects />
+      <Experiences />
 
     </section>
   )
