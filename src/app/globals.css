@@ -13,6 +13,15 @@
   --color-midnight: #14123A;
   --color-lapis-blue: #233269;
   --color-secondary: #6C7DBA;
+  --color-indigo-deep: #1E0A4D;
+--gradient-animated: linear-gradient(
+  90deg,
+  #6f0bad 0%,
+  #5A26C0 25%,
+  #DC1FFF 50%,
+  #5A26C0 75%,
+  #0A0820 100%
+);
 
 }
 
@@ -38,6 +47,14 @@
   --gradient-blue-purple: linear-gradient(90deg, #3B378B 0%, #7226FF 100%);
   --gradient-lightblue-white-pink: linear-gradient(90deg, #87F5F5 0%, #FFFFFF 50%, #F042FF 100%);
   --gradient-blue-basic: linear-gradient(25deg, #0A0820 0%, #233269 52%, #0A0820 86%);
+  --gradient-purple-light: linear-gradient(25deg, #0A0820, #2A2286 100%);
+  --gradient-dark-purple :linear-gradient(
+  90deg,
+  #7C3AED 0%,
+  #9923DE 27%,
+  #DC1FFF 56%,
+  #0A0820 100%
+);
 
 }
 
@@ -54,14 +71,76 @@
 @utility bg-gradient-lightblue-white-pink {
   background: var(--gradient-lightblue-white-pink);
 }
+@utility bg-gradient-purple-light {
+  background: var(--gradient-purple-light);
+}
 @utility bg-gradient-blue-basic {
   background: var(--gradient-blue-basic);
+}
+@utility bg-gradient-dark-purple {
+  background: var(--gradient-dark-purple);
+}
+@utility text-gradient-purple-pink {
+  background: var(--gradient-purple-pink);
+}
+@utility text-gradient-purple-pink {
+  background: var(--gradient-purple-pink);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-blue-purple {
+  background: var(--gradient-blue-purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-lightblue-white-pink {
+  background: var(--gradient-lightblue-white-pink);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-purple-light {
+  background: var(--gradient-purple-light);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-blue-basic {
+  background: var(--gradient-blue-basic);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility text-gradient-animated {
+  background: var(--gradient-animated);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 8s linear infinite;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

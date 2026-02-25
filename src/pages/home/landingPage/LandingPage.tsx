@@ -3,18 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 const LandingPage = () => {
     return (
-        <section className='relative h-screen w-full '>
-            <div className='sosmed-logo  w-max h-screen flex flex-col justify-center'>
-                <Link href="https://github.com/rakhadavin" target="_blank">
-                    <Image src={"/github.svg"} width={40} height={40} alt={"GitHub"} />
+        <section className='relative h-screen w-screen px-8 '>
+            <div className='sosmed-logo  w-max h-screen flex flex-col justify-center gap-4'>
+                <Link href="https://github.com/rakhadavin" target="_blank" className="hover:scale-110 transition-transform duration-300">
+                    <Image src={"/github.svg"} width={40} height={40} alt={"GitHub"} className="hover:scale-110 " />
                 </Link>
-                <Link href="https://www.linkedin.com/in/rakha-davin-bani-alamsyah-0b038a262/" target="_blank">
-                    <Image src={"/linkedin.svg"} width={40} height={40} alt={"LinkedIn"} />
+                <Link href="https://www.linkedin.com/in/rakha-davin-bani-alamsyah-0b038a262/" target="_blank" className="hover:scale-110 transition-transform duration-300">
+                    <Image src={"/linkedin.svg"} width={40} height={40} alt={"LinkedIn"} className="hover:scale-110 " />
                 </Link>
-                <Link href="https://instagram.com/rakha.davin_alamsyah" target="_blank">
+                <Link href="https://instagram.com/rakha.davin_alamsyah" target="_blank" className="hover:scale-110 transition-transform duration-300">
                     <Image src={"/instagram.svg"} width={40} height={40} alt={"Instagram"} />
                 </Link>
-                <Link href="https://wa.me/089508354704" target="_blank">
+                <Link href="https://wa.me/089508354704" target="_blank" className="hover:scale-110 transition-transform duration-300 ">
                     <Image src={"/whatsapp.svg"} width={40} height={40} alt={"WhatsApp"} />
                 </Link>
             </div>
