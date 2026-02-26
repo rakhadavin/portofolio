@@ -2,6 +2,7 @@ import CoreExpertise from '../pages/home/CoreExpertise'
 import Experiences from '../pages/home/Experiences'
 import HighlightedProjects from '../pages/home/HighlightedProjects'
 import LandingPage from '../pages/home/landingPage/LandingPage'
+import TechStack from '../pages/home/TechStack'
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
       <CoreExpertise />
       <HighlightedProjects />
       <Experiences />
+      <TechStack />
 
     </section>
   )
