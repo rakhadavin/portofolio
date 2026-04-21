@@ -32,7 +32,7 @@ const LandingPage = () => {
                 <div className="flex flex-col mb-6">
                     <div className="flex flex-row gap-5 justify-between items-end py-4">
                         <h1 className="text-white font-josefinSans text-8xl uppercase font-bold">Rakha Davin</h1>
-                        <Link href="https://drive.google.com/file/d/1ZwJQdUSNfvRq_bJ9tZwZrL8c1SfkNG63/view?usp=drive_link" className="text-white underline text-sm font-light">View CV</Link>
+                        <Link href="https://drive.google.com/file/d/1Ge-NCw72aKQ-WkyebJ2Kk5-GHaATFqbG/view?usp=drive_link" target="_blank" className="text-white underline text-sm font-light">View CV</Link>
                     </div>
                     <div className="h-px w-full bg-white/30" />
                 </div>
@@ -121,11 +121,11 @@ const LandingPage = () => {
                                 <div className="last-section-right flex flex-row mt-12 items-center justify-center">
                                     <div className=" w-full ">
                                         <p className="text-secondary">Highilighted Project</p>
-                                        <Link href="/cv" className="text-white underline text-sm font-light">DPM UI Company Profile</Link>
+                                        <Link href="https://company-profile-dpmui.vercel.app/home" target="_blank" className="text-white underline text-sm font-light">DPM UI Company Profile</Link>
 
                                     </div>
                                     <div className="text-nowrap bg-white/7 backdrop-blur-sm w-max px-4 py-2 rounded-lg text-white text-sm flex flex-row items-center justify-evenly gap-2 border border-white/35">
-                                        Discover My Projects
+                                        <Link href="https://drive.google.com/file/d/1tTbFv-MkhedgkaBQnWBUOXo1lGqEe3Ca/view?usp=drive_link" target="_blank" className="text-white underline text-sm font-light">Discover My Projects</Link>
                                     </div>
 
 
