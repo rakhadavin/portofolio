@@ -4,7 +4,7 @@ import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { projectSchema, type ProjectFormValues } from "@/lib/validations/project.schema";
-import { supabase } from "@/lib/supabase/client";
+import { createClient } from "@/lib/supabase/client";
 
 const TECH_OPTIONS = [
     "PostgreSQL",
@@ -17,6 +17,7 @@ const TECH_OPTIONS = [
 ] as const;
 
 export default function AddProjectForm() {
+    const supabase = createClient();
     const {
         register,
         control,
@@ -32,7 +33,7 @@ export default function AddProjectForm() {
             previewLink: "",
             githubLink: "",
             category: "",
-            projectDate: undefined as any,
+            projectDate: "",
             role: "",
             techStack: [],
             logoUrl: "",

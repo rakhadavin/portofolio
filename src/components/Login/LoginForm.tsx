@@ -7,8 +7,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import SignInWithGoogleButton from "./SignInWithGoogleButton"
+// import SignInWithGoogleButton from "./SignInWithGoogleButton"
 import { login } from "@/lib/auth-action"
+import { Label } from "../ui/label"
+import { Input } from "../ui/input"
+import SignInWithGoogleButton from "./SIgnInWithGoogle"
+import { Button } from "../ui/button"
 
 export function LoginForm() {
   return (

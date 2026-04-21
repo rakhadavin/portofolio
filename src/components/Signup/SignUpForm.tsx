@@ -10,7 +10,8 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { signup } from "@/lib/auth-actions";
+import { signup } from "@/lib/auth-action";
+// import { signup } from "@/lib/auth-actions";
 
 export function SignUpForm() {
   return (

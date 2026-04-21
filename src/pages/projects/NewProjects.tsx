@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = () => {
+const NewProjects = () => {
   return (
     <div>
           PROJECTS PAGE
@@ -8,4 +8,5 @@ const page = () => {
   )
 }
 
-export default page
+export default NewProjects
+
