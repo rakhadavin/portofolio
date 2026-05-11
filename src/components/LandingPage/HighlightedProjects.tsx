@@ -62,7 +62,7 @@ const HighlightedProjects = () => {
                   <Image src="/logo-prj.png" alt="Project Image" width={25} height={20} />
                   <a className='text-2xl font-bold text-white font-josefinSans tracking-wide hover:underline ' href='/home'>Biblio.io</a>
                 </div>
-                <Link href="https://github.com/your-username/biblio-io" target="_blank">
+                <Link href="https://github.com/rakhadavin/biblio-io" target="_blank">
                   <Github className='bg-white p-1 rounded-xl' size={40} color='black' />
                 </Link>
               </div>
@@ -77,7 +77,7 @@ const HighlightedProjects = () => {
           <div className='content-HP-boxes-items border border-white/35 rounded-2xl bg-gradient-purple-pink backdrop-blur-2xl px-8 py-4 w-[40%] h-full flex flex-col gap-6 hover:bg-white/20 hover:scale-101 scale-105 transition-all duration-300 cursor-pointer '>
             <div className='top-badge flex flex-row items-center justify-between w-full'>
               <div className='category-badge text-sm font-poppins font-light border border-white bg-white/10 rounded-xl px-4 py-2 flex items-center gap-2 w-max'>
-                <p className='uppercase '>data science | ai</p>
+                <p className='uppercase '>AI | Fullstack Development</p>
               </div>
               <p className='uppercase text-sm font-light tracking-wider'>August 2025</p>
             </div>
@@ -91,13 +91,15 @@ const HighlightedProjects = () => {
               <div className='flex flex-row items-center gap-4 '>
                 <div className='flex flex-row w-full gap-4'>
                   <Image src="/logo-prj.png" alt="Project Image" width={25} height={20} />
-                  <a className='text-2xl font-bold text-white font-josefinSans tracking-wide hover:underline ' href='/home'>Biblio.io</a>
+                  <Link href="https://erms-digital-archive.vercel.app" target="_blank">
+                    Archive Management System
+                  </Link>
                 </div>
-                <Link href="https://github.com/your-username/biblio-io" target="_blank">
+                <Link href="https://github.com/rakhadavin/ERMS_Digital_Archive" target="_blank">
                   <Github className='bg-white p-1 rounded-xl' size={40} color='black' />
                 </Link>
               </div>
-              <p className='text-sm font-light text-justify'>AI-powered research assistant that streamlines literature discovery, summarization, and citation management in one seamless platform.</p>
+              <p className='text-sm font-light text-justify'>A metadata-driven digital archive system that improves document classification, retrieval accuracy, retention monitoring, and long-term preservation.</p>
             </div>
             <div>
             </div>
@@ -126,7 +128,7 @@ const HighlightedProjects = () => {
                   <Image src="/logo-prj.png" alt="Project Image" width={25} height={20} />
                   <a className='text-2xl font-bold text-white font-josefinSans tracking-wide hover:underline ' href='/home'>Biblio.io</a>
                 </div>
-                <Link href="https://github.com/your-username/biblio-io" target="_blank">
+                <Link href="https://github.com/rakhadavin/biblio-io" target="_blank">
                   <Github className='bg-white p-1 rounded-xl' size={40} color='black' />
                 </Link>
               </div>
@@ -142,7 +144,7 @@ const HighlightedProjects = () => {
 
         </div>
       </div>
-      <Link href="/projects" className="text-white font-light underline text-lg underline-offset-4 w-full text-end">Explore My Projects</Link>
+      <Link href="/projects" className="text-white font-light underline text-lg underline-offset-4 w-full text-end disabled:true">Explore My Projects</Link>
       
     </section>
   )
