@@ -59,7 +59,7 @@ const HighlightedProjects = () => {
 
               <div className='flex flex-row items-center gap-4 '>
                 <div className='flex flex-row w-full gap-4'>
-                  <Image src="/logo-prj.png" alt="Project Image" width={25} height={20} />
+                  <Image src="/logo-prj.png" alt="Project Image" width={25} height={20} className='rounded-sm' />
                   <a className='text-2xl font-bold text-white font-josefinSans tracking-wide hover:underline ' href='/home'>Biblio.io</a>
                 </div>
                 <Link href="https://github.com/rakhadavin/biblio-io" target="_blank">
@@ -83,15 +83,15 @@ const HighlightedProjects = () => {
             </div>
 
             <div className='prj-img h-full w-full rounded-6xl'>
-              <Image src="/project-img.png" alt="Project Image" width={500} height={500} />
+              <Image src="/metalexicon.png" alt="Project Image" width={500} height={500} className='rounded-sm' />
             </div>
 
             <div className='flex flex-col gap-4 '>
 
               <div className='flex flex-row items-center gap-4 '>
                 <div className='flex flex-row w-full gap-4'>
-                  <Image src="/logo-prj.png" alt="Project Image" width={25} height={20} />
-                  <Link href="https://erms-digital-archive.vercel.app" target="_blank">
+                  {/* <Image src="/logo-prj.png" alt="Project Image" width={30} height={50} /> */}
+                  <Link href="https://erms-digital-archive.vercel.app" target="_blank" className='font-bold'>
                     Archive Management System
                   </Link>
                 </div>
@@ -118,7 +118,7 @@ const HighlightedProjects = () => {
             </div>
 
             <div className='prj-img h-full w-full rounded-6xl'>
-              <Image src="/project-img.png" alt="Project Image" width={500} height={500} />
+              <Image src="/project-img.png" alt="Project Image" width={500} height={500} className='rounded-sm' />
             </div>
 
             <div className='flex flex-col gap-4 '>
