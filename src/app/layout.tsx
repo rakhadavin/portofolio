@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Poppins, Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from '@clerk/nextjs'
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -45,7 +46,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable} ${josefinSans.variable} antialiased`}
       >
-        {children}
+        <ClerkProvider>
+
+          {children}
+        </ClerkProvider>
       </body>
     </html>
   );

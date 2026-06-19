@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
 
 const MENU_ITEMS = [
   { label: "Home", id: "home" },
@@ -69,7 +70,7 @@ export default function Navbar({ isAdmin = false }) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 font-poppins transition-all duration-300 ease-in-out ${
+          className={`fixed top-0 left-0 w-full z-1000 font-poppins transition-all duration-300 ease-in-out ${
         visible ? "translate-y-0" : "-translate-y-full"
       } ${
         scrolled
@@ -77,7 +78,7 @@ export default function Navbar({ isAdmin = false }) {
           : "bg-white/30 backdrop-blur-md border-b border-white/20"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10  ">
         <div className="flex items-center justify-between h-16">
           {/* Flex Group 1: Logo + Menu */}
           <div className="flex items-center gap-10">
@@ -108,7 +109,7 @@ export default function Navbar({ isAdmin = false }) {
                     ref={(el) => (menuRefs.current[item.id] = el)}
                     onClick={() => handleMenuClick(item.id)}
                     onMouseEnter={() => handleMenuHover(item.id)}
-                    className="relative z-10 px-4 py-2 text-sm font-medium text-white hover:text-gray-900 transition-colors duration-200 group/item"
+                          className="relative z-10 px-4 py-2 text-sm font-medium text-white hover:text-gray-900 transition-colors duration-200 group/item"
                   >
                     <span className="inline-block transition-transform duration-200 ease-out group-hover/item:scale-110">
                       {item.label}
@@ -120,46 +121,25 @@ export default function Navbar({ isAdmin = false }) {
           </div>
 
           {/* Flex Group 2: Login Button (admin only) */}
-          <div className="flex items-center gap-4">
-            {!isAdmin && (
-              <button
-                onClick={() => handleMenuClick("login")}
-                className="hidden md:inline-flex items-center px-5 py-2 text-sm font-medium text-white bg-gray-900/90 backdrop-blur-sm rounded-full hover:bg-gray-900 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
-              >
-                Login
-              </button>
-            )}
+                  <div className="flex items-center gap-4">
+                      <header className="flex justify-end items-center p-4 gap-4 h-16">
+                          <Show when="signed-out">
+                              <button className=" bg-gray-900/90 backdrop-blur-sm  hover:bg-gray-900 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                                  <SignInButton />
 
-            {/* Mobile menu toggle */}
-            <button
-              onClick={() => setMobileOpen((prev) => !prev)}
-              className="md:hidden p-2 text-gray-700 rounded-full hover:bg-white/40 transition-colors duration-200"
-              aria-label="Toggle menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {mobileOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
+                              </button>
+                              {/* <SignUpButton>
+                                  <button className=" bg-gray-900/90 backdrop-blur-sm  hover:bg-gray-900 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                                      Sign Up
+
+                                  </button>
+                              </SignUpButton> */}
+                          </Show>
+                          <Show when="signed-in">
+                              <UserButton />
+                          </Show>
+                      </header>
+
           </div>
         </div>
 
