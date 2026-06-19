@@ -1,7 +1,7 @@
 import React from 'react'
 import { MoveUpRight } from 'lucide-react';
 import Link from 'next/link';
-const CoreExpertise = () => {
+const CoreExpertise = ({ isAuth }: { isAuth: boolean }) => {
     return (
         <section className=" w-screen core-expertise font-medium text-4xl font-poppins  text-white h-full flex flex-row items-center justify-evenly mt-8 py-8 px-24 gap-14">
             <div className='judul-subjudul flex flex-col  items-center max-w-2xl '>

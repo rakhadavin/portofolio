@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Link from "next/link";
-const LandingPage = () => {
+const LandingPage = ({ isAuth }: { isAuth: boolean }) => {
     return (
         <section className='relative h-screen w-screen px-8 '>
             <div className='sosmed-logo  w-max h-screen flex flex-col justify-center gap-4'>
