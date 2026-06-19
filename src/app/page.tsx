@@ -1,9 +1,12 @@
+import Navbar from '@/components/Navbar/Navbar'
 import Home from '../pages/home/Home'
 
 const page = () => {
   return (
-    <Home />
-
+    <div className='flex flex-col ' >
+      <Navbar />
+      <Home />
+    </div >
   )
 }
 
