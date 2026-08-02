@@ -32,7 +32,7 @@ const LandingPage = ({ isAuth }: { isAuth: boolean }) => {
                 <div className="flex flex-col mb-6">
                     <div className="flex flex-row gap-5 justify-between items-end py-4">
                         <h1 className="text-white font-josefinSans text-8xl uppercase font-bold">Rakha Davin</h1>
-                        <Link href="https://drive.google.com/file/d/1Ge-NCw72aKQ-WkyebJ2Kk5-GHaATFqbG/view?usp=drive_link" target="_blank" className="text-white underline text-sm font-light">View CV</Link>
+                        <Link href="https://drive.google.com/file/d/1EQ7PrD3OVSMRDFzLEX2PVHqXFu7SYEhg/view?usp=drive_link" target="_blank" className="text-white underline text-sm font-light">View CV</Link>
                     </div>
                     <div className="h-px w-full bg-white/30" />
                 </div>
