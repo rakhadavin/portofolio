@@ -115,7 +115,7 @@ const LandingPage = ({ isAuth }: { isAuth: boolean }) => {
                             <div className="flex flex-col ">
                                 <div>
                                     <p className="text-secondary">About Me</p>
-                                    <p>Computer Science graduate with 3+ years of experience in software engineering, data analytics, and UI/UX design. Experienced in building scalable applications, developing data-driven solutions, and transforming complex datasets into actionable business insights. Recently worked as a CRM Data Analyst at Blibli, leveraging SQL, Python, and BigQuery to support customer analytics, performance optimization, and strategic decision-making.</p>
+                                    <p>Computer Science graduate with 3+ years of experience in data analytics, business intelligence, and process automation. Experienced in transforming large-scale datasets into actionable business insights using SQL, Python, Google BigQuery, Excel, and Power BI. Passionate about eliminating repetitive manual work by building automated workflows and scalable data solutions that improve operational efficiency and support data-driven decision-making. Recently worked as a CRM Data Analyst at Blibli, focusing on customer analytics and performance optimization.</p>
                                 </div>
 
                                 <div className="last-section-right flex flex-row mt-12 items-center justify-center">

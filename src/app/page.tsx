@@ -1,5 +1,5 @@
+import Home from '@/components/Home/Home'
 import Navbar from '@/components/Navbar/Navbar'
-import Home from '../pages/home/Home'
 
 const page = () => {
   return (

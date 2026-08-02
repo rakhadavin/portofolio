@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
+import { Show, SignInButton, UserButton } from '@clerk/nextjs'
 import { useRouter } from "next/navigation";
 
 const MENU_ITEMS = [
@@ -17,7 +17,7 @@ export default function Navbar({ isAdmin = false }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hoverStyle, setHoverStyle] = useState({ opacity: 0, left: 0, width: 0 });
-  const menuRefs = useRef({});
+  const menuRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const router = useRouter();
 
 
@@ -49,7 +49,7 @@ export default function Navbar({ isAdmin = false }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleMenuClick = (id) => {
+  const handleMenuClick = (id: string) => {
     setMobileOpen(false);
     console.log("Navigating to:", id);
     const target = document.getElementById(id);
@@ -59,7 +59,7 @@ export default function Navbar({ isAdmin = false }) {
     // }
   };
 
-  const handleMenuHover = (id) => {
+  const handleMenuHover = (id: string) => {
     const el = menuRefs.current[id];
     if (!el) return;
     setHoverStyle({
@@ -111,7 +111,9 @@ export default function Navbar({ isAdmin = false }) {
               {MENU_ITEMS.map((item) => (
                 <li key={item.id}>
                   <button
-                    ref={(el) => (menuRefs.current[item.id] = el)}
+                    ref={(el) => {
+                      menuRefs.current[item.id] = el;
+                    }}
                     onClick={() => handleMenuClick(item.id)}
                     onMouseEnter={() => handleMenuHover(item.id)}
                           className="relative z-10 px-4 py-2 text-sm font-medium text-white hover:text-gray-900 transition-colors duration-200 group/item"

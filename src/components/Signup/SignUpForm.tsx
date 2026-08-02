@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { signup } from "@/lib/auth-action";
+// import { signup } from "@/lib/auth-action";
 // import { signup } from "@/lib/auth-actions";
 
 export function SignUpForm() {
@@ -59,9 +59,9 @@ export function SignUpForm() {
               <Label htmlFor="password">Password</Label>
               <Input name="password" id="password" type="password" />
             </div>
-            <Button formAction={signup} type="submit" className="w-full">
+            {/* <Button formAction={signup} type="submit" className="w-full">
               Create an account
-            </Button>
+            </Button> */}
           </div>
         </form>
         <div className="mt-4 text-center text-sm">
