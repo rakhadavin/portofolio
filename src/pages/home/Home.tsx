@@ -7,10 +7,6 @@ import { auth, currentUser } from '@clerk/nextjs/server'
 const Home = async () => {
   const { isAuthenticated } = await auth()
 
-  // Protect the route by checking if the user is signed in
-  if (!isAuthenticated) {
-    return <div>Sign in to view this page</div>
-  }
 
   // Get the Backend User object when you need access to the user's information
   const user = await currentUser()
@@ -22,7 +18,7 @@ const Home = async () => {
       <CoreExpertise isAuth={isAuth} />
       <HighlightedProjects isAuth={isAuth} />
       <Experiences isAuth={isAuth} />
-      <TechStack />
+      <TechStack isAuth={isAuth} />
     </section>
   )
 }

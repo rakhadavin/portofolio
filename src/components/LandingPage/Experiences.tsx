@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { ChevronRight } from 'lucide-react'
 
-const Experiences = () => {
+const Experiences = ({ isAuth }: { isAuth: boolean }) => {
   return (
       <section className='w-screen core-expertise font-medium text-4xl font-poppins  text-white h-full grid grid-cols-2 items-center justify-evenly py-8 px-24 gap-14 mt-8'>
           <section className='flex flex-col gap-8  '>

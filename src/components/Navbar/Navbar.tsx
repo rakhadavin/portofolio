@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
+import { useRouter } from "next/navigation";
 
 const MENU_ITEMS = [
   { label: "Home", id: "home" },
@@ -17,6 +18,8 @@ export default function Navbar({ isAdmin = false }) {
   const [scrolled, setScrolled] = useState(false);
   const [hoverStyle, setHoverStyle] = useState({ opacity: 0, left: 0, width: 0 });
   const menuRefs = useRef({});
+  const router = useRouter();
+
 
   useEffect(() => {
     lastScrollY.current = window.scrollY;
@@ -48,10 +51,12 @@ export default function Navbar({ isAdmin = false }) {
 
   const handleMenuClick = (id) => {
     setMobileOpen(false);
+    console.log("Navigating to:", id);
     const target = document.getElementById(id);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    router.push(`/${id}`);
+    // if (target) {
+    // target.scrollIntoView({ behavior: "smooth", block: "start" });
+    // }
   };
 
   const handleMenuHover = (id) => {
@@ -123,17 +128,14 @@ export default function Navbar({ isAdmin = false }) {
           {/* Flex Group 2: Login Button (admin only) */}
                   <div className="flex items-center gap-4">
                       <header className="flex justify-end items-center p-4 gap-4 h-16">
-                          <Show when="signed-out">
-                              <button className=" bg-gray-900/90 backdrop-blur-sm  hover:bg-gray-900 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-                                  <SignInButton />
+              <Show when="signed-out">
+                <SignInButton mode="modal" >
+                  <button className=" bg-gray-900/90 backdrop-blur-sm  hover:bg-gray-900 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
 
+                    Sign In
                               </button>
-                              {/* <SignUpButton>
-                                  <button className=" bg-gray-900/90 backdrop-blur-sm  hover:bg-gray-900 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-                                      Sign Up
+                </SignInButton>
 
-                                  </button>
-                              </SignUpButton> */}
                           </Show>
                           <Show when="signed-in">
                               <UserButton />
