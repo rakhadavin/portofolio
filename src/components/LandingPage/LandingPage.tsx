@@ -125,7 +125,7 @@ const LandingPage = ({ isAuth }: { isAuth: boolean }) => {
 
                                     </div>
                                     <div className="text-nowrap bg-white/7 backdrop-blur-sm w-max px-4 py-2 rounded-lg text-white text-sm flex flex-row items-center justify-evenly gap-2 border border-white/35">
-                                        <Link href="https://drive.google.com/file/d/1sNVSxpQ8a-GIPStWx01tDHhUFsOjKH0n/view?usp=sharing" target="_blank" className="text-white underline text-sm font-light">Discover My Projects</Link>
+                                        <Link href="https://drive.google.com/file/d/1sNVSxpQ8a-GIPStWx01tDHhUFsOjKH0n/view?usp=sharing" target="_blank" className="text-white underline text-sm font-light">Data Analyst Project</Link>
                                     </div>
 
 
