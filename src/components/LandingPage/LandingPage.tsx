@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Link from "next/link";
-const LandingPage = () => {
+const LandingPage = ({ isAuth }: { isAuth: boolean }) => {
     return (
         <section className='relative h-screen w-screen px-8 '>
             <div className='sosmed-logo  w-max h-screen flex flex-col justify-center gap-4'>
@@ -91,7 +91,7 @@ const LandingPage = () => {
                                     <li>Big Data</li>
                                     <li>UI/UX</li>
                                     <li>AI</li>
-                                    <li>Business Intelligent</li>
+                                    <li>Data & Business Intelligent</li>
                                     <li>Data Science</li>
                                 </ul>
                             </div>
@@ -115,7 +115,7 @@ const LandingPage = () => {
                             <div className="flex flex-col ">
                                 <div>
                                     <p className="text-secondary">About Me</p>
-                                    <p>Final-year Computer Science student with 3+ years of experience in full-stack development, UI/UX, and data analytics. Experienced in building scalable, data-driven applications and extracting insights to support business decisions. Recently worked as a CRM Data Analyst at Blibli, focusing on customer data analysis and performance optimization.</p>
+                                    <p>Computer Science graduate with 3+ years of experience in data analytics, business intelligence, and process automation. Experienced in transforming large-scale datasets into actionable business insights using SQL, Python, Google BigQuery, Excel, and Power BI. Passionate about eliminating repetitive manual work by building automated workflows and scalable data solutions that improve operational efficiency and support data-driven decision-making. Recently worked as a CRM Data Analyst at Blibli, focusing on customer analytics and performance optimization.</p>
                                 </div>
 
                                 <div className="last-section-right flex flex-row mt-12 items-center justify-center">
@@ -125,7 +125,7 @@ const LandingPage = () => {
 
                                     </div>
                                     <div className="text-nowrap bg-white/7 backdrop-blur-sm w-max px-4 py-2 rounded-lg text-white text-sm flex flex-row items-center justify-evenly gap-2 border border-white/35">
-                                        <Link href="https://drive.google.com/file/d/1tTbFv-MkhedgkaBQnWBUOXo1lGqEe3Ca/view?usp=drive_link" target="_blank" className="text-white underline text-sm font-light">Discover My Projects</Link>
+                                        <Link href="https://drive.google.com/file/d/1sNVSxpQ8a-GIPStWx01tDHhUFsOjKH0n/view?usp=sharing" target="_blank" className="text-white underline text-sm font-light">Discover My Projects</Link>
                                     </div>
 
 

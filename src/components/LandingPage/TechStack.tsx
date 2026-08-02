@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 
-const TechStack = () => {
+const TechStack = ({ isAuth }: { isAuth: boolean }) => {
   return (
-    <section className='relative w-full  font-medium text-4xl font-poppins  text-white h-full  items-center justify-evenly py-8 px-24 gap-14 mt-8 flex flex-col '>
+    <section className='relative w-full  font-medium text-4xl font-poppins  text-white h-full  items-center justify-evenly py-8 px-24 gap-14 mt-8 flex flex-col  '>
       <div className="absolute top-20 -left-10 w-200 h-100 bg-pink-main rounded-full blur-3xl opacity-20 z-0"></div>
       <Image src="/ai-person.svg" alt="tech stack" width={600} height={100} className='absolute z-2 -left-50 top-12' />
-    <div className="pointer-events-none absolute bottom-0 -left-50 right-0 h-40 bg-gradient-to-t from-dark-purple/100 to-transparent z-20" />
+
+      <div className="pointer-events-none absolute bottom-0 left-1/2 h-40 w-screen -translate-x-1/2 bg-gradient-to-t from-dark-purple/100 to-transparent z-20" />
       <h1 className=' uppercase font-bold text-gradient-animated w-full text-center z-99 '>Tech Stack</h1>
       <div className='container-techstack flex flex-row gap-2 items-stretch justify-evenly flex-wrap w-full h-full z-999'>
 

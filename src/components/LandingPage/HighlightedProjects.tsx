@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Github } from 'lucide-react'
 import Link from 'next/link'
-const HighlightedProjects = () => {
+const HighlightedProjects = ({ isAuth }: { isAuth: boolean }) => {
     const [selectedFilter,setSelectedFilter] = React.useState('all')
     const filters = [
       { label: "All", value: "all" },
